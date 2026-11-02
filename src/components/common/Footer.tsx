@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Heart, 
@@ -7,14 +7,17 @@ import {
   Mail, 
   Clock, 
   ShieldCheck, 
-  Sparkles
+  Sparkles,
+  Code2
 } from 'lucide-react';
 import { useSettings } from '../../context/SettingsContext';
 
 import { BrandLogo } from './BrandLogo';
+import { DeveloperProfileModal } from './DeveloperProfileModal';
 
 export const Footer: React.FC = () => {
   const { settings } = useSettings();
+  const [isDevModalOpen, setIsDevModalOpen] = useState(false);
 
   return (
     <footer style={{ backgroundColor: 'var(--bg-secondary)', borderTop: '1px solid var(--border-subtle)', marginTop: '4rem' }}>
@@ -183,6 +186,30 @@ export const Footer: React.FC = () => {
                   Customer Profile
                 </Link>
               </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => setIsDevModalOpen(true)}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    padding: 0,
+                    fontSize: '0.92rem',
+                    color: 'var(--brand-primary)',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    transition: 'all var(--transition-fast)'
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--brand-primary-hover)')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--brand-primary)')}
+                >
+                  <Code2 size={15} style={{ color: 'var(--brand-secondary)' }} />
+                  Meet the Developer
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -239,8 +266,32 @@ export const Footer: React.FC = () => {
           fontSize: '0.82rem',
           color: 'var(--text-muted)'
         }}>
-          <div>
-            &copy; {new Date().getFullYear()} <strong>FRESH CAKE by PROVA</strong>. All rights reserved.
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+            <span>&copy; {new Date().getFullYear()} <strong>FRESH CAKE by PROVA</strong>. All rights reserved.</span>
+            <span style={{ color: 'var(--border-subtle)' }}>•</span>
+            <button
+              type="button"
+              onClick={() => setIsDevModalOpen(true)}
+              style={{
+                background: 'none',
+                border: 'none',
+                padding: 0,
+                fontSize: '0.82rem',
+                color: 'var(--brand-primary)',
+                fontWeight: 600,
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '5px',
+                textDecoration: 'none',
+                transition: 'color var(--transition-fast)'
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--brand-primary-hover)')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--brand-primary)')}
+            >
+              <Code2 size={13} style={{ color: 'var(--brand-secondary)' }} />
+              Meet the Developer
+            </button>
           </div>
           <div style={{
             backgroundColor: 'var(--brand-accent-light)',
@@ -255,6 +306,12 @@ export const Footer: React.FC = () => {
         </div>
 
       </div>
+
+      {/* Developer Profile Modal */}
+      <DeveloperProfileModal 
+        isOpen={isDevModalOpen} 
+        onClose={() => setIsDevModalOpen(false)} 
+      />
     </footer>
   );
 };
