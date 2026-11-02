@@ -3,7 +3,8 @@
  * Communicates with Django REST Framework backend at /api/v1/
  */
 
-const API_BASE = '/api/v1';
+const BASE_URL = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '');
+const API_BASE = `${BASE_URL}/api/v1`;
 
 export interface TokenResponse {
   access: string;
