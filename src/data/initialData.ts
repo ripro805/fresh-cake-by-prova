@@ -20,7 +20,7 @@ export const INITIAL_SETTINGS: StoreSettings = {
   bank_details: 'City Bank / Eastern Bank (Available upon request)',
   is_store_open: true,
   social_instagram: 'https://instagram.com/',
-  social_facebook: 'https://facebook.com/'
+  social_facebook: 'https://www.facebook.com/profile.php?id=61558676760968'
 };
 
 export const INITIAL_PRODUCTS: Product[] = [
