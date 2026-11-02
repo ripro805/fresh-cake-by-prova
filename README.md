@@ -14,6 +14,7 @@
   [![Neon PostgreSQL](https://img.shields.io/badge/Neon-PostgreSQL_18-00E599?style=for-the-badge&logo=postgresql&logoColor=white)](https://neon.tech/)
   [![Render](https://img.shields.io/badge/Render-Backend_Live-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://fresh-cake-by-prova-backend.onrender.com/)
   [![Vercel](https://img.shields.io/badge/Vercel-Frontend_Ready-black?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
   <p align="center">
     <a href="https://fresh-cake-by-prova-backend.onrender.com/"><strong>Explore Live API »</strong></a>
@@ -280,6 +281,12 @@ The backend features an interactive Swagger UI documentation at [`/api/docs/`](h
 - **CSRF & CORS Hardened**: Strict origin whitelisting across Vercel production and preview domains.
 - **JWT Protection**: Industry-standard JSON Web Token auth with automatic silent refresh.
 - **Encrypted Storage**: SSL enforced connection pooling via Neon Cloud.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
