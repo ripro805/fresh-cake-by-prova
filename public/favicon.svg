@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="48" fill="#FAF6EF" stroke="#79543D" stroke-width="3"/>
+  <circle cx="50" cy="50" r="44" fill="#F2E9DC" />
+  <!-- Cake Base -->
+  <path d="M25 65 H75 V76 C75 78 73 80 71 80 H29 C27 80 25 78 25 76 Z" fill="#79543D" />
+  <path d="M28 48 H72 V65 H28 Z" fill="#B9855B" />
+  <path d="M34 34 H66 V48 H34 Z" fill="#D9B99B" />
+  <!-- Cream Drips -->
+  <path d="M34 38 C36 41 38 43 40 40 C42 37 44 42 46 41 C48 40 50 43 52 41 C54 39 56 42 58 40 C60 38 62 41 66 38" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Candle / Cherry -->
+  <circle cx="50" cy="28" r="4.5" fill="#C93B3B" />
+  <path d="M50 24 C52 20 54 20 55 18" stroke="#79543D" stroke-width="1.5" stroke-linecap="round" />
+</svg>
