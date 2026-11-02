@@ -294,6 +294,8 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 **Md. Rifat Islam Rizvi**
 - GitHub: [@ripro805](https://github.com/ripro805)
+- LinkedIn: [Md. Rifat Islam Rizvi](https://www.linkedin.com/in/md-rifat-islam-rizvi-9b5273328/)
+- Facebook: [ripro.805](https://www.facebook.com/ripro.805/)
 - Project: **Fresh Cake by Prova**
 - Email: `rifatrizviofficial001@gmail.com`
 

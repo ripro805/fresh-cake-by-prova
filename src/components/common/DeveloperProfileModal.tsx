@@ -27,6 +27,12 @@ const LinkedinIcon = ({ size = 16 }: { size?: number }) => (
   </svg>
 );
 
+const FacebookIcon = ({ size = 16 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  </svg>
+);
+
 interface DeveloperProfileModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -78,6 +84,7 @@ export const DeveloperProfileModal: React.FC<DeveloperProfileModalProps> = ({ is
       whatsapp: "+8801305612767",
       github: "https://github.com/ripro805",
       linkedin: "https://www.linkedin.com/in/md-rifat-islam-rizvi-9b5273328/",
+      facebook: "https://www.facebook.com/ripro.805/",
       portfolio: import.meta.env.VITE_DEVELOPER_PORTFOLIO_URL || "https://github.com/ripro805/portfolio-rizvi",
     }
   };
@@ -521,6 +528,45 @@ export const DeveloperProfileModal: React.FC<DeveloperProfileModalProps> = ({ is
                 <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)', display: 'block', textTransform: 'uppercase' }}>LinkedIn</span>
                 <span style={{ fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                   Md. Rifat Islam Rizvi
+                  <ExternalLink size={12} style={{ color: 'var(--text-muted)' }} />
+                </span>
+              </div>
+            </a>
+
+            {/* Facebook */}
+            <a 
+              href={developer.contact.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                padding: '0.75rem 0.9rem',
+                backgroundColor: 'var(--bg-primary)',
+                borderRadius: 'var(--radius-md)',
+                border: '1px solid var(--border-subtle)',
+                color: 'var(--text-primary)',
+                textDecoration: 'none',
+                fontSize: '0.85rem',
+                transition: 'all var(--transition-fast)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = '#1877F2';
+                e.currentTarget.style.backgroundColor = 'rgba(24, 119, 242, 0.08)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'var(--border-subtle)';
+                e.currentTarget.style.backgroundColor = 'var(--bg-primary)';
+              }}
+            >
+              <div style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: '#1877F2', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF', flexShrink: 0 }}>
+                <FacebookIcon size={16} />
+              </div>
+              <div>
+                <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)', display: 'block', textTransform: 'uppercase' }}>Facebook</span>
+                <span style={{ fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  ripro.805
                   <ExternalLink size={12} style={{ color: 'var(--text-muted)' }} />
                 </span>
               </div>
