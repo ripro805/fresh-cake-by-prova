@@ -2,6 +2,16 @@ import { api } from '../api/client';
 import { Product, Order, CustomCakeRequest, StoreSettings, OrderStatus, PaymentStatus, QuotationStatus, PaginatedResult } from '../types';
 import { INITIAL_PRODUCTS, INITIAL_ORDERS, INITIAL_CUSTOM_CAKES, INITIAL_SETTINGS } from '../data/initialData';
 
+export const resolveImageUrl = (img?: string): string => {
+  if (!img) return '/images/hero_cake.jpg';
+  if (img.startsWith('http://') || img.startsWith('https://')) return img;
+  if (img.startsWith('/media/')) {
+    const baseUrl = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '');
+    return `${baseUrl}${img}`;
+  }
+  return img;
+};
+
 const mapBackendProduct = (item: any): Product => ({
   id: item.id,
   slug: item.slug,
@@ -11,7 +21,7 @@ const mapBackendProduct = (item: any): Product => ({
   description: item.description,
   price: parseFloat(item.price || item.base_price),
   discount_price: item.discount_price ? parseFloat(item.discount_price) : undefined,
-  images: item.images && item.images.length > 0 ? item.images : ['/images/hero_cake.jpg'],
+  images: item.images && item.images.length > 0 ? item.images.map(resolveImageUrl) : ['/images/hero_cake.jpg'],
   variants: (item.variants || []).map((v: any) => ({
     id: v.id,
     name: v.name,
@@ -115,7 +125,7 @@ export const storeService = {
           description: item.description,
           price: parseFloat(item.price || item.base_price),
           discount_price: item.discount_price ? parseFloat(item.discount_price) : undefined,
-          images: item.images && item.images.length > 0 ? item.images : ['/images/hero_cake.jpg'],
+          images: item.images && item.images.length > 0 ? item.images.map(resolveImageUrl) : ['/images/hero_cake.jpg'],
           variants: (item.variants || []).map((v: any) => ({
             id: v.id,
             name: v.name,
@@ -194,7 +204,7 @@ export const storeService = {
           description: item.description,
           price: parseFloat(item.price || item.base_price),
           discount_price: item.discount_price ? parseFloat(item.discount_price) : undefined,
-          images: item.images && item.images.length > 0 ? item.images : ['/images/hero_cake.jpg'],
+          images: item.images && item.images.length > 0 ? item.images.map(resolveImageUrl) : ['/images/hero_cake.jpg'],
           variants: (item.variants || []).map((v: any) => ({
             id: v.id,
             name: v.name,
@@ -580,7 +590,7 @@ export const storeService = {
           color_preference: r.color_preference,
           custom_message: r.custom_message,
           design_description: r.design_description,
-          reference_image: r.reference_image_url || r.reference_image,
+          reference_image: resolveImageUrl(r.reference_image_url || r.reference_image),
           delivery_type: r.delivery_type,
           delivery_date: r.delivery_date,
           delivery_time: r.delivery_time,
