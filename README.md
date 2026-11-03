@@ -32,7 +32,7 @@
 
 | Metric | Project Specification |
 | :--- | :--- |
-| **Client** | **PROVA Artisan Studio & Patisserie** (Kushtia, Khulna Division, Bangladesh) |
+| **Client** | **Fresh Cake By Prova** (Kushtia, Khulna Division, Bangladesh) |
 | **Industry** | Gourmet Bakery, Customized Celebration Cakes & Quick-Service Patisserie |
 | **Engagement Scope** | End-to-End Bespoke Commercial Development (UI/UX Branding, Full-Stack Architecture, Real-Time Cake Quotation Studio, WhatsApp CRM, and Back-Office ERP) |
 | **Delivery Model** | Paid Commercial Commission |
