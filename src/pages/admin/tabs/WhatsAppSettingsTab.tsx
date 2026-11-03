@@ -70,7 +70,8 @@ export const WhatsAppSettingsTab: React.FC = () => {
     }
   };
 
-  const webhookUrl = `${window.location.origin}/api/v1/webhooks/whatsapp/`;
+  const backendBase = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '') || window.location.origin;
+  const webhookUrl = `${backendBase}/api/v1/webhooks/whatsapp/`;
   const verifyToken = 'freshcake_webhook_token_2026';
 
   const copyToClipboard = (text: string, type: 'url' | 'token') => {
