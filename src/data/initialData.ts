@@ -7,7 +7,7 @@ export const INITIAL_SETTINGS: StoreSettings = {
   announcement_bar: 'Freshly Baked in Kushtia — Order Artisan Cakes, Brioche Donuts & Hot Momos!',
   phone: '01305612767',
   whatsapp_number: '01305612767',
-  email: 'contact@freshcakebyprova.com',
+  email: 'freshcakebyprova.official@gmail.com',
   address: 'Upazila Road, Indra Mor, Kushtia, Bangladesh',
   baking_house_address: 'Upazila Road, Indra Mor, Kushtia, Bangladesh',
   pickup_point_address: 'Upazila Mor, Disha Tower, Kushtia, Bangladesh',

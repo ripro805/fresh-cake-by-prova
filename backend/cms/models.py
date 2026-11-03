@@ -10,7 +10,7 @@ class StoreSettings(models.Model):
     announcement_bar = models.CharField(max_length=255, default='Freshly Baked in Kushtia — Order Artisan Cakes, Brioche Donuts & Hot Momos!')
     phone = models.CharField(max_length=30, default='01308516242')
     whatsapp_number = models.CharField(max_length=30, default='01308516242')
-    email = models.EmailField(default='contact@freshcakebyprova.com')
+    email = models.EmailField(default='freshcakebyprova.official@gmail.com')
     address = models.CharField(max_length=255, default='Upazila Road, Indra Mor, Kushtia, Bangladesh')
     baking_house_address = models.CharField(max_length=255, default='Upazila Road, Indra Mor, Kushtia, Bangladesh')
     pickup_point_address = models.CharField(max_length=255, default='Upazila Mor, Disha Tower, Kushtia, Bangladesh')

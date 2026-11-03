@@ -43,3 +43,4 @@ class MediaUploadView(APIView):
             file_name = default_storage.save(f"uploads/{file_obj.name}", file_obj)
             url = default_storage.url(file_name)
             return Response({'url': url}, status=status.HTTP_201_CREATED)
+
