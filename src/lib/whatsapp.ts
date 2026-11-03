@@ -17,3 +17,4 @@ export const getWhatsAppUrl = (phone?: string, text?: string): string => {
   const textParam = text ? `?text=${encodeURIComponent(text)}` : '';
   return `https://wa.me/${number}${textParam}`;
 };
+

@@ -499,6 +499,30 @@ class ApiClient {
       body: JSON.stringify(payload),
     });
   }
+
+  async uploadMedia(file: File): Promise<{ url: string; public_id?: string }> {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const token = localStorage.getItem('fresh_cake_jwt_access');
+    const headers: Record<string, string> = {};
+    if (token) {
+      headers['Authorization'] = `Bearer ${token}`;
+    }
+
+    const response = await fetch(`${API_BASE}/media/upload/`, {
+      method: 'POST',
+      headers,
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const err = await response.json().catch(() => ({}));
+      throw new Error(err.error || 'Failed to upload media.');
+    }
+
+    return response.json();
+  }
 }
 
 export const api = new ApiClient();

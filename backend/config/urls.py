@@ -10,6 +10,7 @@ from drf_spectacular.views import (
 )
 
 from support_chat.views import WhatsAppWebhookView
+from config.media_views import MediaUploadView
 
 
 def api_root_view(request):
@@ -66,6 +67,7 @@ urlpatterns = [
     path('api/v1/reviews/', include('reviews.urls')),
     path('api/v1/audit/', include('audit.urls')),
     path('api/v1/support/', include('support_chat.urls')),
+    path('api/v1/media/upload/', MediaUploadView.as_view(), name='media-upload'),
     path('api/v1/webhooks/whatsapp/', WhatsAppWebhookView.as_view(), name='whatsapp-webhook-root'),
 ]
 

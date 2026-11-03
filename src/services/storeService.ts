@@ -823,6 +823,15 @@ export const storeService = {
   },
 
   async uploadImage(file: File): Promise<string> {
+    try {
+      const res = await api.uploadMedia(file);
+      if (res && res.url) {
+        return res.url;
+      }
+    } catch (err) {
+      console.warn('Direct cloud media upload failed, falling back to local base64:', err);
+    }
+
     return new Promise((resolve) => {
       const reader = new FileReader();
       reader.onloadend = () => {
