@@ -18,6 +18,7 @@ import { Order, OrderStatus } from '../types';
 import { storeService } from '../services/storeService';
 import { useSettings } from '../context/SettingsContext';
 import { BrandLogo } from '../components/common/BrandLogo';
+import { getWhatsAppUrl } from '../lib/whatsapp';
 
 const STATUS_STEPS: OrderStatus[] = [
   'Order Placed',
@@ -338,7 +339,7 @@ export const TrackOrderPage: React.FC = () => {
 
               <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
                 <a
-                  href={`https://wa.me/${settings.whatsapp_number.replace(/\D/g, '')}?text=${encodeURIComponent(`Hello FRESH CAKE by PROVA! I am checking status for Order ID: ${searchedOrder.id}`)}`}
+                  href={getWhatsAppUrl(settings.whatsapp_number, `Hello FRESH CAKE by PROVA! I am checking status for Order ID: ${searchedOrder.id}`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-whatsapp btn-sm"
@@ -369,7 +370,7 @@ export const TrackOrderPage: React.FC = () => {
               Please make sure the Order ID (e.g. PROVA-2026-8812) and phone number match the exact details submitted during checkout.
             </p>
             <a
-              href={`https://wa.me/${settings.whatsapp_number.replace(/\D/g, '')}?text=${encodeURIComponent(`Hello, I need help locating my bakery order. Order ID: ${orderId}`)}`}
+              href={getWhatsAppUrl(settings.whatsapp_number, `Hello, I need help locating my bakery order. Order ID: ${orderId}`)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-secondary btn-sm"

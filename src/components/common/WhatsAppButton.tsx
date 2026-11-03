@@ -16,6 +16,7 @@ import {
 import { useAuth } from '../../context/AuthContext';
 import { useSettings } from '../../context/SettingsContext';
 import { api } from '../../api/client';
+import { getWhatsAppUrl } from '../../lib/whatsapp';
 
 interface SupportMessageItem {
   id: string;
@@ -326,7 +327,7 @@ export const WhatsAppButton: React.FC = () => {
                 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.72rem', color: 'rgba(255,255,255,0.78)', marginTop: '2px' }}>
                   <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#25D366', display: 'inline-block' }} />
-                  <span>WhatsApp Live Sync</span>
+                  <span>Bakery Live Support</span>
                   {isPolling && <RotateCw size={10} className="animate-spin" style={{ color: '#D9B99B' }} />}
                 </div>
               </div>
@@ -366,6 +367,45 @@ export const WhatsAppButton: React.FC = () => {
                 <X size={18} />
               </button>
             </div>
+          </div>
+
+          {/* Quick Direct WhatsApp Option - Always visible at top */}
+          <div
+            style={{
+              padding: '0.65rem 1rem',
+              backgroundColor: '#F0FDF4',
+              borderBottom: '1px solid #BBF7D0',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '4px'
+            }}
+          >
+            <a
+              href={getWhatsAppUrl(settings.whatsapp_number || '01305612767', "Hello FRESH CAKE by PROVA! I would like to chat with bakery support.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+                backgroundColor: '#25D366',
+                color: '#FFFFFF',
+                padding: '0.6rem 1rem',
+                borderRadius: 'var(--radius-md)',
+                fontSize: '0.84rem',
+                fontWeight: 700,
+                textDecoration: 'none',
+                boxShadow: '0 2px 8px rgba(37, 211, 102, 0.28)',
+                transition: 'all 0.2s ease',
+              }}
+            >
+              <MessageCircle size={18} />
+              <span>Direct WhatsApp Chat ({settings.whatsapp_number || '01305612767'})</span>
+            </a>
+            <span style={{ fontSize: '0.68rem', color: '#166534', textAlign: 'center', fontWeight: 600 }}>
+              ⚡ Instant live chat directly on your WhatsApp app
+            </span>
           </div>
 
           {/* Active Conversation Reference Banner */}
@@ -420,32 +460,6 @@ export const WhatsAppButton: React.FC = () => {
               backgroundColor: 'var(--bg-primary)'
             }}
           >
-            {/* Direct WhatsApp Action Link for Instant Option 1 Chat */}
-            <a
-              href={`https://wa.me/${(settings.whatsapp_number || settings.phone || '01308516242').replace(/\D/g, '')}?text=${encodeURIComponent("Hello FRESH CAKE by PROVA! I would like to enquire about your cakes.")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '8px',
-                backgroundColor: '#25D366',
-                color: '#FFFFFF',
-                padding: '0.6rem 1rem',
-                borderRadius: 'var(--radius-md)',
-                fontSize: '0.82rem',
-                fontWeight: 700,
-                textDecoration: 'none',
-                boxShadow: '0 2px 8px rgba(37, 211, 102, 0.25)',
-                transition: 'all 0.2s ease',
-                flexShrink: 0
-              }}
-            >
-              <MessageCircle size={16} />
-              <span>Click to Chat Directly on WhatsApp</span>
-            </a>
-
             {/* Initial Welcome Greeting */}
             <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
               <div
@@ -472,7 +486,7 @@ export const WhatsAppButton: React.FC = () => {
                   borderRadius: '4px 16px 16px 16px',
                   boxShadow: 'var(--shadow-sm)',
                   border: '1px solid var(--border-subtle)',
-                  maxWidth: '82%',
+                  maxWidth: '85%',
                   fontSize: '0.84rem',
                   color: 'var(--text-primary)',
                   lineHeight: 1.5
@@ -481,7 +495,7 @@ export const WhatsAppButton: React.FC = () => {
                 <div style={{ fontWeight: 700, fontSize: '0.78rem', color: 'var(--brand-primary)', marginBottom: '3px' }}>
                   PROVA Artisan Studio
                 </div>
-                Hello! Welcome to FRESH CAKE by PROVA live bakery support. Your messages route directly to our WhatsApp so you can discuss custom cakes, timings, and flavors in real-time.
+                Welcome! For fast WhatsApp response, tap the green <strong>"Direct WhatsApp Chat"</strong> button above. You can also chat directly here on the website and our team will answer your ticket!
               </div>
             </div>
 
@@ -650,7 +664,7 @@ export const WhatsAppButton: React.FC = () => {
                   handleSendMessage();
                 }
               }}
-              placeholder="Type your message to the bakery..."
+              placeholder="Type a message for bakery support..."
               style={{
                 flex: 1,
                 padding: '0.65rem 0.95rem',
@@ -681,7 +695,7 @@ export const WhatsAppButton: React.FC = () => {
                 transition: 'all 0.2s ease',
                 flexShrink: 0
               }}
-              title="Send to WhatsApp"
+              title="Send message"
               aria-label="Send Message"
             >
               <Send size={16} />

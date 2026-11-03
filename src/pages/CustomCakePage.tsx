@@ -21,6 +21,7 @@ import { storeService } from '../services/storeService';
 import { useSettings } from '../context/SettingsContext';
 import { useAuth } from '../context/AuthContext';
 import { BrandLogo } from '../components/common/BrandLogo';
+import { getWhatsAppUrl } from '../lib/whatsapp';
 
 const OCCASIONS = [
   'Birthday',
@@ -257,7 +258,7 @@ export const CustomCakePage: React.FC = () => {
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
               <a
-                href={`https://wa.me/${settings.whatsapp_number.replace(/\D/g, '')}?text=${encodeURIComponent(`Hello FRESH CAKE by PROVA! I just submitted a custom cake request: ${submittedRequestId} for ${occasion}. Here is my design requirement.`)}`}
+                href={getWhatsAppUrl(settings.whatsapp_number, `Hello FRESH CAKE by PROVA! I just submitted a custom cake request: ${submittedRequestId} for ${occasion}. Here is my design requirement.`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"

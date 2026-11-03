@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { getWhatsAppUrl } from '../../lib/whatsapp';
 import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { BrandLogo } from './BrandLogo';
 import { 
@@ -1019,7 +1020,7 @@ export const Navbar: React.FC = () => {
               <a href={`tel:${settings.phone}`} style={{ fontWeight: 600, color: 'var(--brand-primary)', display: 'block', marginBottom: '0.35rem', textDecoration: 'none' }}>
                 {settings.phone}
               </a>
-              <a href={`https://wa.me/${settings.whatsapp_number}`} target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.88rem', color: '#25D366', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}>
+              <a href={getWhatsAppUrl(settings.whatsapp_number, "Hello FRESH CAKE by PROVA! I would like to enquire about your cakes.")} target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.88rem', color: '#25D366', fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px' }}>
                 <span>WhatsApp Live Chat</span> &rarr;
               </a>
             </div>

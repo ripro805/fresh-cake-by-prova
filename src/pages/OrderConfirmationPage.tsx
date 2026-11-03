@@ -17,6 +17,7 @@ import { Order } from '../types';
 import { storeService } from '../services/storeService';
 import { useSettings } from '../context/SettingsContext';
 import { BrandLogo } from '../components/common/BrandLogo';
+import { getWhatsAppUrl } from '../lib/whatsapp';
 
 export const OrderConfirmationPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -56,8 +57,7 @@ export const OrderConfirmationPage: React.FC = () => {
 
     const message = `Hello FRESH CAKE by PROVA!\n\nI have placed an order on your website:\n*Order ID:* ${order.id}\n*Customer:* ${order.customer_name}\n*Phone:* ${order.customer_phone}\n\n*Ordered Items:*\n${itemList}\n\n*Total Amount:* ${settings.currency} ${order.total}\n*Payment Method:* ${order.payment_method.toUpperCase()}${order.payment_trx_id ? ` (TrxID: ${order.payment_trx_id})` : ''}\n*Delivery Method:* ${order.delivery_type === 'delivery' ? `Doorstep Delivery to: ${order.delivery_address}` : 'Store Pickup at Bakehouse'}\n\nPlease confirm my order. Thank you!`;
 
-    const cleanNumber = settings.whatsapp_number.replace(/\D/g, '');
-    window.open(`https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(getWhatsAppUrl(settings.whatsapp_number, message), '_blank');
   };
 
   if (loading) {

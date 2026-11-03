@@ -38,6 +38,7 @@ import { WhatsAppSettingsTab } from './tabs/WhatsAppSettingsTab';
 import { ConversationsTab } from './tabs/ConversationsTab';
 import { BrandLogo } from '../../components/common/BrandLogo';
 import { Pagination } from '../../components/common/Pagination';
+import { getWhatsAppUrl } from '../../lib/whatsapp';
 
 export const AdminDashboard: React.FC = () => {
   const { isAdmin, adminLogout } = useAuth();
@@ -820,7 +821,7 @@ export const AdminDashboard: React.FC = () => {
 
                             {/* WhatsApp Customer Button */}
                             <a
-                              href={`https://wa.me/${order.customer_phone.replace(/\D/g, '')}?text=${encodeURIComponent(`Hello ${order.customer_name}! Updating you regarding your FRESH CAKE by PROVA order #${order.id}. Current status: ${order.order_status}.`)}`}
+                              href={getWhatsAppUrl(order.customer_phone, `Hello ${order.customer_name}! Updating you regarding your FRESH CAKE by PROVA order #${order.id}. Current status: ${order.order_status}.`)}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="btn btn-whatsapp btn-sm"
@@ -1048,7 +1049,7 @@ export const AdminDashboard: React.FC = () => {
                             </button>
 
                             <a
-                              href={`https://wa.me/${req.customer_phone.replace(/\D/g, '')}?text=${encodeURIComponent(`Hello ${req.customer_name}! This is FRESH CAKE by PROVA regarding your Custom Cake request #${req.id} for ${req.occasion}.`)}`}
+                              href={getWhatsAppUrl(req.customer_phone, `Hello ${req.customer_name}! This is FRESH CAKE by PROVA regarding your Custom Cake request #${req.id} for ${req.occasion}.`)}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="btn btn-whatsapp btn-sm"

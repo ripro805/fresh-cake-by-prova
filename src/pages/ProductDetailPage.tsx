@@ -18,6 +18,7 @@ import { useCart } from '../context/CartContext';
 import { useSettings } from '../context/SettingsContext';
 import { ProductCard } from '../components/product/ProductCard';
 import { BrandLogo } from '../components/common/BrandLogo';
+import { getWhatsAppUrl } from '../lib/whatsapp';
 
 export const ProductDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -101,8 +102,7 @@ export const ProductDetailPage: React.FC = () => {
 
   const handleWhatsAppEnquiry = () => {
     const text = `Hello FRESH CAKE by PROVA! I am inquiring about "${product.name}" (${selectedVariant.name}). Link: ${window.location.href}`;
-    const cleanNumber = settings.whatsapp_number.replace(/\D/g, '');
-    window.open(`https://wa.me/${cleanNumber}?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(getWhatsAppUrl(settings.whatsapp_number, text), '_blank');
   };
 
   return (
