@@ -38,7 +38,7 @@
 | **Delivery Model** | Paid Commercial Commission |
 | **Lead Engineer & Architect** | **Md. Rifat Islam Rizvi** (AI/ML + Full-Stack Builder) |
 | **Contact Email** | `freshcakebyprova.official@gmail.com` |
-| **Production Support** | WhatsApp & Phone: `+8801305612767` |
+| **Production Support** | WhatsApp & Phone: `+8801308516242` |
 
 ---
 
@@ -70,7 +70,7 @@ Before commissioning this platform, **PROVA Artisan Studio** faced severe operat
 
 ### 💬 2. Dual-Engine WhatsApp CRM & Support
 * **One-Click WhatsApp Deep Integration**:
-  * Automated international number formatting (`8801305612767`) ensuring zero redirect failures.
+  * Automated international number formatting (`8801308516242`) ensuring zero redirect failures.
   * Pre-populated inquiry messages for every product, custom cake quote, and tracking receipt.
 * **In-Website Live Ticket Sync**:
   * Dedicated customer support chat modal with auto-generated reference tickets (e.g. `Ticket: FC-6436`).
@@ -152,9 +152,9 @@ The platform is equipped with an authenticated **Owner Admin Portal** for day-to
 
 * **Admin Portal URL**: `/login` (redirects automatically to `/admin` upon Owner login)
 * **Owner Admin Identifier**: `freshcakebyprova.official@gmail.com`
-* **Owner Phone**: `01305612767`
+* **Owner Phone**: `01308516242`
 * **Official Contact**: `freshcakebyprova.official@gmail.com`
-* **Direct Studio WhatsApp**: `+8801305612767`
+* **Direct Studio WhatsApp**: `+8801308516242`
 
 ---
 

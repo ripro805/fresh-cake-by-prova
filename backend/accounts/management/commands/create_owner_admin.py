@@ -5,7 +5,7 @@ class Command(BaseCommand):
     help = 'Securely provisions or updates the single Owner-Admin account for FRESH CAKE by PROVA.'
 
     def add_arguments(self, parser):
-        parser.add_argument('--phone', type=str, default='01305612767', help='Owner admin phone number')
+        parser.add_argument('--phone', type=str, default='01308516242', help='Owner admin phone number')
         parser.add_argument('--password', type=str, default='fresh_cake_by_2K25', help='Owner admin secure password')
         parser.add_argument('--name', type=str, default='PROVA (Owner & Head Baker)', help='Owner full name')
         parser.add_argument('--email', type=str, default='freshcakebyprova.official@gmail.com', help='Owner contact email')

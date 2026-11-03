@@ -381,7 +381,7 @@ export const WhatsAppButton: React.FC = () => {
             }}
           >
             <a
-              href={getWhatsAppUrl(settings.whatsapp_number || '01305612767', "Hello FRESH CAKE by PROVA! I would like to chat with bakery support.")}
+              href={getWhatsAppUrl(settings.whatsapp_number || '01308516242', "Hello FRESH CAKE by PROVA! I would like to chat with bakery support.")}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -401,7 +401,7 @@ export const WhatsAppButton: React.FC = () => {
               }}
             >
               <MessageCircle size={18} />
-              <span>Direct WhatsApp Chat ({settings.whatsapp_number || '01305612767'})</span>
+              <span>Direct WhatsApp Chat ({settings.whatsapp_number || '01308516242'})</span>
             </a>
             <span style={{ fontSize: '0.68rem', color: '#166534', textAlign: 'center', fontWeight: 600 }}>
               ⚡ Instant live chat directly on your WhatsApp app
