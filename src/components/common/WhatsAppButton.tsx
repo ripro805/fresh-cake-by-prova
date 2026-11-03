@@ -420,6 +420,32 @@ export const WhatsAppButton: React.FC = () => {
               backgroundColor: 'var(--bg-primary)'
             }}
           >
+            {/* Direct WhatsApp Action Link for Instant Option 1 Chat */}
+            <a
+              href={`https://wa.me/${(settings.whatsapp_number || settings.phone || '01308516242').replace(/\D/g, '')}?text=${encodeURIComponent("Hello FRESH CAKE by PROVA! I would like to enquire about your cakes.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+                backgroundColor: '#25D366',
+                color: '#FFFFFF',
+                padding: '0.6rem 1rem',
+                borderRadius: 'var(--radius-md)',
+                fontSize: '0.82rem',
+                fontWeight: 700,
+                textDecoration: 'none',
+                boxShadow: '0 2px 8px rgba(37, 211, 102, 0.25)',
+                transition: 'all 0.2s ease',
+                flexShrink: 0
+              }}
+            >
+              <MessageCircle size={16} />
+              <span>Click to Chat Directly on WhatsApp</span>
+            </a>
+
             {/* Initial Welcome Greeting */}
             <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
               <div
