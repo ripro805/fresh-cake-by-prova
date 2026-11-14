@@ -70,7 +70,7 @@ export const WhatsAppSettingsTab: React.FC = () => {
     }
   };
 
-  const backendBase = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '') || window.location.origin;
+  const backendBase = (import.meta.env.VITE_API_URL || 'https://fresh-cake-by-prova.onrender.com').replace(/\/+$/, '') || window.location.origin;
   const webhookUrl = `${backendBase}/api/v1/webhooks/whatsapp/`;
   const verifyToken = 'freshcake_webhook_token_2026';
 

@@ -8,18 +8,18 @@
   **A Custom-Engineered Full-Stack Artisan Bakery, Interactive Custom Cake Builder & Operations Management System**
 
   [![Commercial Commission](https://img.shields.io/badge/Project_Type-Commercial_Paid_Client-FFD700?style=for-the-badge&logo=codeforces&logoColor=black)](https://github.com/ripro805/fresh-cake-by-prova)
-  [![Client Status](https://img.shields.io/badge/Status-Production_Commissioned-success?style=for-the-badge)](https://fresh-cake-by-prova-backend.onrender.com/)
+  [![Client Status](https://img.shields.io/badge/Status-Production_Commissioned-success?style=for-the-badge)](https://fresh-cake-by-prova.onrender.com/)
   [![React 19](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
   [![Django 5](https://img.shields.io/badge/Django-5.2-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
   [![Neon PostgreSQL](https://img.shields.io/badge/Neon-PostgreSQL_18-00E599?style=for-the-badge&logo=postgresql&logoColor=white)](https://neon.tech/)
   [![Cloudinary CDN](https://img.shields.io/badge/Cloudinary-Media_CDN-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)](https://cloudinary.com/)
-  [![Render Live](https://img.shields.io/badge/Render-Backend_Live-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://fresh-cake-by-prova-backend.onrender.com/)
+  [![Render Live](https://img.shields.io/badge/Render-Backend_Live-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://fresh-cake-by-prova.onrender.com/)
 
   <p align="center">
-    <a href="https://fresh-cake-by-prova-backend.onrender.com/"><strong>Explore Live Backend API »</strong></a>
+    <a href="https://fresh-cake-by-prova.onrender.com/"><strong>Explore Live Backend API »</strong></a>
     &nbsp;•&nbsp;
-    <a href="https://fresh-cake-by-prova-backend.onrender.com/api/docs/"><strong>Swagger API Docs »</strong></a>
+    <a href="https://fresh-cake-by-prova.onrender.com/api/docs/"><strong>Swagger API Docs »</strong></a>
     &nbsp;•&nbsp;
     <a href="https://github.com/ripro805/fresh-cake-by-prova"><strong>GitHub Repository »</strong></a>
   </p>

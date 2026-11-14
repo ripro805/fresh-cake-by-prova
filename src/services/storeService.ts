@@ -6,7 +6,7 @@ export const resolveImageUrl = (img?: string): string => {
   if (!img) return '/images/hero_cake.jpg';
   if (img.startsWith('http://') || img.startsWith('https://')) return img;
   if (img.startsWith('/media/')) {
-    const baseUrl = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '');
+    const baseUrl = (import.meta.env.VITE_API_URL || 'https://fresh-cake-by-prova.onrender.com').replace(/\/+$/, '');
     return `${baseUrl}${img}`;
   }
   return img;
