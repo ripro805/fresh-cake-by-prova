@@ -493,7 +493,7 @@ export const WhatsAppButton: React.FC = () => {
                 }}
               >
                 <div style={{ fontWeight: 700, fontSize: '0.78rem', color: 'var(--brand-primary)', marginBottom: '3px' }}>
-                  PROVA Artisan Studio
+                  Fresh Cake by Prova
                 </div>
                 Welcome! For fast WhatsApp response, tap the green <strong>"Direct WhatsApp Chat"</strong> button above. You can also chat directly here on the website and our team will answer your ticket!
               </div>

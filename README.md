@@ -46,7 +46,7 @@
 
 ## 🎯 The Client Challenge & Strategic Objectives
 
-Before commissioning this platform, **PROVA Artisan Studio** faced severe operational bottlenecks common to rapidly growing artisan confectioneries:
+Before commissioning this platform, **Fresh Cake by Prova** faced severe operational bottlenecks common to rapidly growing artisan confectioneries:
 
 1. **Unstructured Custom Cake Ordering**: Customers ordered complex multi-tiered customized cakes through scattered WhatsApp voice notes, Facebook messages, and in-person visits, leading to design misunderstandings, flavor mismatch, and pricing inconsistencies.
 2. **Payment & Reconciliation Friction**: High rates of unverified bKash/Nagad mobile banking transactions without automated TrxID matching caused reconciliation delays.
@@ -229,6 +229,6 @@ python manage.py runserver
 
 ## 📄 License & Commercial Rights
 
-This software is licensed under the [MIT License](LICENSE) with all proprietary branding, trademark imagery, and bakery commercial assets reserved by **PROVA Artisan Studio**.
+This software is licensed under the [MIT License](LICENSE) with all proprietary branding, trademark imagery, and bakery commercial assets reserved by **Fresh Cake by Prova**.
 
 *Engineered with precision, luxury aesthetics, and robust full-stack architecture for FRESH CAKE by PROVA.*
