@@ -36,6 +36,8 @@
 | **Industry** | Gourmet Bakery, Customized Celebration Cakes & Quick-Service Patisserie |
 | **Engagement Scope** | End-to-End Bespoke Commercial Development (UI/UX Branding, Full-Stack Architecture, Real-Time Cake Quotation Studio, WhatsApp CRM, and Back-Office ERP) |
 | **Delivery Model** | Paid Commercial Commission |
+| **Live Backend API** | [https://fresh-cake-by-prova.onrender.com](https://fresh-cake-by-prova.onrender.com/) |
+| **API Documentation** | [Swagger UI (OpenAPI 3.0)](https://fresh-cake-by-prova.onrender.com/api/docs/) |
 | **Lead Engineer & Architect** | **Md. Rifat Islam Rizvi** (AI/ML + Full-Stack Builder) |
 | **Contact Email** | `freshcakebyprova.official@gmail.com` |
 | **Production Support** | WhatsApp & Phone: `+8801308516242` |
@@ -142,7 +144,7 @@ flowchart TD
 | **Media & Asset CDN** | **Cloudinary Cloud Media Storage** (`django-cloudinary-storage`) |
 | **Authentication & RBAC** | SimpleJWT with custom claims (Unified Phone/Email Login, `OWNER_ADMIN` vs `CUSTOMER`) |
 | **API Documentation** | **drf-spectacular** (OpenAPI 3.0, Swagger UI & Redoc) |
-| **Hosting & Deployment** | **Render** (Backend API), **Vercel** (Frontend SPA), **UptimeRobot** (Monitoring) |
+| **Hosting & Deployment** | **Render** ([Live API: fresh-cake-by-prova.onrender.com](https://fresh-cake-by-prova.onrender.com/)), **Vercel** (Frontend SPA), **UptimeRobot** (Monitoring) |
 
 ---
 
@@ -170,6 +172,9 @@ cd fresh-cake-by-prova
 ```bash
 # Install frontend dependencies
 npm install
+
+# Live Render API endpoint (pre-configured in .env.production / src/api/client.ts)
+# VITE_API_URL=https://fresh-cake-by-prova.onrender.com
 
 # Run Vite development server
 npm run dev
